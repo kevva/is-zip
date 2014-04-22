@@ -1,0 +1,20 @@
+{
+  "name": "is-zip",
+  "version": "0.1.0",
+  "description": "Check if a Buffer/Uint8Array is a ZIP file",
+  "license": "MIT",
+  "repo": "kevva/is-zip",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "archive",
+    "buffer",
+    "check",
+    "detect",
+    "zip",
+    "type",
+    "uint8array"
+  ]
+}
