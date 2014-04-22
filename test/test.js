@@ -6,7 +6,7 @@ var fs = require('fs');
 var isZip = require('../');
 var path = require('path');
 
-describe('extname()', function () {
+describe('isZip()', function () {
     function check(file) {
         return isZip(fs.readFileSync(file));
     }
