@@ -4,29 +4,20 @@
 
 ## Install
 
-```bash
+```sh
 $ npm install --save is-zip
-```
-
-```bash
-$ component install kevva/is-zip
-```
-
-```bash
-$ bower install --save is-zip
 ```
 
 ## Usage
 
 ```js
-var fs = require('fs');
 var isZip = require('is-zip');
-var buf = fs.readFileSync('foo.zip');
+var read = require('fs').readFileSync;
 
-isZip(buf);
+isZip(read('foo.zip'));
 // => true
 ```
 
 ## License
 
-MIT © [Kevin Mårtensson](https://github.com/kevva)
+[MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Kevin Mårtensson](https://github.com/kevva)
