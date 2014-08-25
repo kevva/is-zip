@@ -1,23 +1,15 @@
-/*global describe, it */
 'use strict';
 
-var assert = require('assert');
-var fs = require('fs');
 var isZip = require('../');
 var path = require('path');
+var readChunk = require('read-chunk');
+var test = require('ava');
 
-describe('isZip()', function () {
-    function check(file) {
-        return isZip(fs.readFileSync(file));
-    }
+test('should detect ZIP from buffer', function (t) {
+    t.plan(2);
 
-    it('should detect ZIP from buffer', function (cb) {
-        assert(check(path.join(__dirname, 'fixtures/test.zip')));
-        cb();
-    });
-
-    it('should detect ZIP from Uint8Array', function () {
-        var buf = new Uint8Array([80, 75, 3, 4]);
-        assert(isZip(buf));
+    readChunk(path.join(__dirname, 'fixtures/test.zip'), 0, 5, function (err, buf) {
+        t.assert(!err);
+        t.assert(isZip(buf));
     });
 });
