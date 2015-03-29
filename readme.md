@@ -2,11 +2,13 @@
 
 > Check if a Buffer/Uint8Array is a ZIP file
 
+
 ## Install
 
-```sh
+```
 $ npm install --save is-zip
 ```
+
 
 ## Usage
 
@@ -17,6 +19,7 @@ var read = require('fs').readFileSync;
 isZip(read('foo.zip'));
 //=> true
 ```
+
 
 ## License
 
