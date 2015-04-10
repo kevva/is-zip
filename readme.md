@@ -13,8 +13,8 @@ $ npm install --save is-zip
 ## Usage
 
 ```js
-var isZip = require('is-zip');
 var read = require('fs').readFileSync;
+var isZip = require('is-zip');
 
 isZip(read('foo.zip'));
 //=> true
