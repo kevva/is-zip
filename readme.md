@@ -1,4 +1,4 @@
-# is-zip [![Build Status](http://img.shields.io/travis/kevva/is-zip/master.svg?style=flat)](https://travis-ci.org/kevva/is-zip)
+# is-zip [![Build Status](https://travis-ci.org/kevva/is-zip.svg?branch=master)](https://travis-ci.org/kevva/is-zip)
 
 > Check if a Buffer/Uint8Array is a ZIP file
 
@@ -13,10 +13,10 @@ $ npm install --save is-zip
 ## Usage
 
 ```js
-var read = require('fs').readFileSync;
-var isZip = require('is-zip');
+const fs = require('fs');
+const isZip = require('is-zip');
 
-isZip(read('foo.zip'));
+isZip(fs.readFileSync('foo.zip'));
 //=> true
 ```
 
